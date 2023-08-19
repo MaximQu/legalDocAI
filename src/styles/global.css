@@ -1,0 +1,41 @@
+/* @import url("styles/reset.css"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main > section {
+	padding-block: clamp(2.5rem, 5vw, 3.4375rem);
+}
+
+@layer base {
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}
+
+@layer components {
+	.container-big {
+		width: min(calc(100% - 2rem), 90rem);
+		margin-inline: auto;
+	}
+}
+
+@layer base {
+    html {
+        scroll-padding-top: 40px;
+    }
+	html,
+	body {
+		@apply font-helvetica;
+		min-height: 100vh;
+		background-color: #03052c;
+		color: white;
+	}
+
+	h2 {
+		color: white;
+	}
+}
